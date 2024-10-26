@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.game-container{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    
+}
+.diano{
+    background-image: url(dino.png);
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -15px;
+    left: 10vw;
+}
+.obstacle{
+    background-image: url(dragon.png);
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0px;
+    right: 10vw;
+    
+       
+    }
+    .obs{
+        animation: obs 2s linear infinite 
+    }
+    .msg{
+        font-size: 65px;
+        position: relative;
+        top: 70px;
+        color: black;
+        font-weight: 100;
+        text-align: center;
+        animation: msg 1s ease-in;
+    }
+
+
+.jump{
+  animation: dino 0.6s linear;
+}
+.score{
+    /* height: 60px;
+    width: 170px; */
+    color: blueviolet;
+    border-radius: 15px;
+    border: 2px solid black;
+    position: absolute;
+    right:30px;
+    top: 30px;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+
+}
+
+@keyframes dino{
+    0%{
+         bottom: -15px;
+         color: brown;
+    }
+    50%{
+          bottom: 300px;
+          color: green;
+    }     
+    100%{
+         bottom: -15px;
+         color: black;
+    }
+}
+
+@keyframes obs{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+@keyframes msg{
+    0%{
+          font-size: 300px;
+    }
+    50%{
+           font-size: 200px;
+    }
+    100%{
+            font-size: 100px;
+    }
+}
